@@ -12,14 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true,
       "maxLength": 250
-    },
-    "category": {
-      "type": "string",
-      "maxLength": 200
     },
     "description": {
       "type": "customField",
@@ -44,6 +40,12 @@
     },
     "date": {
       "type": "date"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "blogs"
     }
   }
 }
